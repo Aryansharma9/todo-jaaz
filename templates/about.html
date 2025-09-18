@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About • Anti‑Forget To‑Do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #ffecd2;
+      --bg2: #fcb69f;
+      --card: rgba(255,255,255,0.9);
+      --accent: #ff6b6b;
+      --muted: #6b6b6b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      display:flex;align-items:center;justify-content:center;padding:32px;
+    }
+    .wrap{width:100%;max-width:900px}
+    .card{
+      background:var(--card);
+      border-radius:20px;
+      padding:34px;
+      box-shadow:0 12px 40px rgba(17,24,39,0.12);
+      display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;backdrop-filter: blur(6px);
+    }
+    @media (max-width:760px){.card{grid-template-columns:1fr;}}
+    h1{margin:0;font-size:28px;letter-spacing:-0.2px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
+    .about-text{margin-top:18px;font-size:16px;line-height:1.6;color:#222}
+    .tease{display:inline-block;margin-top:12px;font-weight:600}
+
+    /* Right column */
+    .right{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;border-radius:14px;background:linear-gradient(180deg, rgba(255,107,107,0.06), rgba(255,107,107,0.02));
+    }
+    .badge{font-size:13px;background:rgba(255,255,255,0.7);padding:8px 12px;border-radius:999px;box-shadow:0 6px 18px rgba(255,107,107,0.08);font-weight:600}
+    .hero-emoji{font-size:72px;margin:14px 0;transform:rotate(-6deg)}
+    .cta{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:10px 14px;font-weight:700;text-decoration:none;color:var(--accent);box-shadow:0 8px 20px rgba(17,24,39,0.08);}
+    .small{font-size:12px;color:var(--muted);margin-top:10px}
+
+    /* Floating confetti */
+    .confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .confetti i{position:absolute;opacity:0.9;font-style:normal;transform-origin:center;animation:floater 6s linear infinite}
+    .c1{left:6%;top:6%;font-size:20px;animation-delay:0s}
+    .c2{left:82%;top:14%;font-size:28px;animation-delay:1s}
+    .c3{left:48%;top:4%;font-size:18px;animation-delay:2s}
+    .c4{left:24%;top:72%;font-size:22px;animation-delay:3s}
+    .c5{left:72%;top:66%;font-size:16px;animation-delay:4s}
+    @keyframes floater{
+      0%{transform:translateY(0) rotate(0)}
+      50%{transform:translateY(10px) rotate(8deg)}
+      100%{transform:translateY(-8px) rotate(-6deg)}
+    }
+
+    /* small footer */
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff,rgba(255,255,255,0.7));box-shadow:0 8px 20px rgba(0,0,0,0.06);font-size:22px">📝</div>
+          <div>
+            <h1>About this To‑Do</h1>
+            <div class="subtitle">A tiny helper for big forgetters like jaaz</div>
+          </div>
+        </div>
+
+        <p class="about-text">
+          This to-do website was made for my friend who somehow manages to forget <em>everything</em> (and sometimes me too). It’s a simple place to jot down tasks so nothing slips away… and also my way of teasing them for having a memory shorter than a goldfish <span aria-hidden>🐠</span>.
+        </p>
+
+        <p class="about-text tease">Add a task, tick it off, and laugh at our collective forgetfulness — respectfully, of course. 😄</p>
+
+        <footer>Built with a pinch of code and a lot of friendly teasing by Aryan.</footer>
+      </div>
+
+      <aside class="right" aria-hidden>
+        <div class="badge">Anti‑Forget Machine</div>
+        <div class="hero-emoji">🧠✨</div>
+        <a href="/" class="cta">Open To‑Do →</a>
+        <div class="small">Tip: Start typing and press enter to add a task.</div>
+      </aside>
+
+    </div>
+  </div>
+
+  <div class="confetti" aria-hidden>
+    <i class="c1">✨</i>
+    <i class="c2">🎉</i>
+    <i class="c3">🪄</i>
+    <i class="c4">💡</i>
+    <i class="c5">☕</i>
+  </div>
+
+</body>
+</html>
